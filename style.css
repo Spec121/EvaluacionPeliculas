@@ -1,0 +1,317 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+
+main{
+    display: flex;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+.container__general{
+  background: white;
+  display: flex;
+  position: relative;
+  height: 400px;
+  width: 650px;
+  margin: auto;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
+/*Seccion containers Formularios*/
+
+.container__inputs{
+    display: flex;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: transform 1s ease; 
+}
+
+.conatiner__login{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    transition: 1.3s ease;
+}
+
+
+.container__register{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 2s ease;
+}
+
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+    > * {
+        display: flex;
+        margin: 0;
+    }
+    
+
+    > .contenedor__inputs{
+        flex-direction: column;
+        gap: 1rem;
+
+        button{
+         background: linear-gradient(
+            to left,
+            purple 0%,
+            rgb(191, 101, 191) 100%
+         );
+
+         border-radius: 12px;
+         border: none;
+         padding: 5px  10px 5px 10px;
+         color: white;
+         font-weight: 600;
+        }
+
+        input{
+            border: none;
+            height: 20px;
+            outline: none;
+            box-shadow: 1px ;
+        }
+    }
+    
+    > .container__redes__sociales{
+        position: relative;
+        gap: 2rem;
+        top: 16%;
+    }
+    
+    p{
+        position: relative;
+        text-align: center;
+        top: 5%;
+    }
+
+    span{
+        position: relative;
+        top: 7%;
+    }
+    
+    .recuperacion__contraseña{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        > *{
+            margin: 0;
+        }
+
+        a{
+            position: relative;
+            text-decoration: none;
+            top: 20px;
+        }
+    }
+
+    h2{
+        position: relative;
+        bottom: 10%;
+    }
+}
+
+/*Seccion Informacion y cambios*/
+
+
+.container__informacion{
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 50%;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 1s ease;
+}
+
+
+.container__login__informacion{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+    align-items: center;
+    border-radius: 110px 10px 10px 110px;
+
+    > * {
+        margin: 0;
+        color: white;
+    }
+
+    button{
+        position: relative;
+        background-color: transparent;
+        border: 2px solid gray;
+        padding: 5px 30px 5px 30px;
+        top: 50px;
+        border-radius: 10px;
+    }
+
+    p{
+        display: flex;
+        position: relative;
+        font-size: 24px;
+        bottom: 10%;
+        margin-top: 15px;
+    }
+
+    h1{
+        position: relative;
+        bottom: 5%;
+        font-size: 20px;
+    }
+    
+}
+
+.container__login__register{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+    align-items: center;
+    border-radius: 110px 10px 10px 110px;
+
+    > * {
+        margin: 0;
+        color: white;
+    }
+
+    button{
+        position: relative;
+        background-color: transparent;
+        border: 2px solid gray;
+        padding: 5px 30px 5px 30px;
+        top: 50px;
+        border-radius: 10px;
+    }
+
+    p{
+        display: flex;
+        position: relative;
+        font-size: 24px;
+        bottom: 10%;
+        margin-top: 15px;
+    }
+
+    h1{
+        position: relative;
+        bottom: 5%;
+        font-size: 20px;
+    }
+}
+
+.container__redes__sociales{
+
+    i{
+        position: relative;
+        bottom: 14px;
+        color: black;
+        font-size: 14px;
+        border: 1px solid gray;
+        padding: 9px;
+        border-radius: 10px;
+    }
+
+    .fa-envelope:hover{
+        color: red;
+        transform: scale(1.4);
+        transition: transform 0.5s ease;
+    }
+
+    .fa-facebook:hover{
+        position: relative;
+        color: blue;
+        transform: scale(1.4);
+        transition: transform 0.5s ease;
+    }
+
+    .fa-twitter:hover{
+        color: rgb(115, 115, 221);
+        transform: scale(1.4);
+        transition: transform 0.5s ease;
+    }
+
+    .fa-instagram:hover{
+        color: palevioletred;
+        transform: scale(1.4);
+        transition: transform 0.5s ease;
+    }
+}
+
+
+
+/*Seccion animaciones y diseño*/
+
+
+.container__general.active .container__inputs{
+    transform: translateX(100%);
+}
+
+
+
+.container__general.active .container__informacion{
+    transform: translateX(-100%);
+}
+
+.container__general.adicional .container__login__informacion{
+    animation: moverDerecha 1s ease forwards; 
+}
+
+.container__general.adicional .container__login__register{
+    animation: moverDerecha 1s ease forwards; 
+}
+
+
+
+.container__general.active .container__login__informacion {
+    animation: moverIzquierda 1s ease forwards; 
+}
+
+
+
+.animacion{
+    transition: 1.3s ease;
+}
+
+
+
+@keyframes moverDerecha{
+    0%{
+        border-radius: 10px 110px 110px 10px;
+    }
+    100%{
+        border-radius: 110px 10px 10px 110px;
+    }
+}
+
+
+@keyframes moverIzquierda {
+  0%{
+    border-radius: 150px 10px 10px 150px;
+  }
+  100%{
+    border-radius: 10px 110px 110px 10px;
+    z-index: 3;
+  }
+}
